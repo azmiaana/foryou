@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunpei's Stories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <section id="landing">
+        <div class="container">
+            <h1>Welcome to this page</h1>
+            <p>A small space, and beautiful</p>
+            <p>this special space made for you</p>
+        </div>
+    </section>
+
+    <section id="works">
+        <div class="container">
+            <h2>Which Bunpei’s story have you read?</h2>
+            <div class="cards">
+                <div class="card" data-work="1">
+                    <input type="checkbox" id="work1">
+                    <label for="work1">Jaki Asha</label>
+                </div>
+                <div class="card" data-work="2">
+                    <input type="checkbox" id="work2">
+                    <label for="work2">Raja Mochi</label>
+                </div>
+                <div class="card" data-work="3">
+                    <input type="checkbox" id="work3">
+                    <label for="work3">Kael Iris</label>
+                </div>
+            </div>
+            <p id="feedback"></p>
+            <p>If you haven’t read them all, there’s still time.</p>
+            <a href="https://instagram.com/pinkyypieu" class="btn" target="_blank">Read Bunpei’s works</a>
+        </div>
+    </section>
+
+    <section id="messages">
+        <div class="container">
+            <h2>Leave a Message for Teteh Pei</h2>
+            <form id="messageForm">
+                <input type="text" id="name" placeholder="Your name (optional)">
+                <textarea id="message" placeholder="Your message..." required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <div id="messageList"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Follow also @piyverzz</p>
+            <a href="https://instagram.com/piyverzz" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="icon">
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
