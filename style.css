@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FCE4EC;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #F8BBD9;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #F8BBD9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #E91E63;
+}
+
+/* Landing */
+#landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FCE4EC, #F8BBD9);
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Works */
+#works {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #FCE4EC;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card input {
+    display: none;
+}
+
+.card label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #F8BBD9;
+    cursor: pointer;
+}
+
+.card input:checked + label {
+    color: #E91E63;
+}
+
+#feedback {
+    font-style: italic;
+    color: #F8BBD9;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Messages */
+#messages {
+    padding: 60px 0;
+    background-color: #FCE4EC;
+}
+
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+#messageForm input, #messageForm textarea {
+    padding: 10px;
+    border: 1px solid #F8BBD9;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#messageForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#messageList {
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+.message-card h3 {
+    font-size: 1rem;
+    color: #F8BBD9;
+}
+
+.message-card p {
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #F8BBD9;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 2rem; }
+    .cards { flex-direction: column; align-items: center; }
+    .card { width: 80%; }
+}
